@@ -426,3 +426,133 @@ footer {
   }
 }
 
+/* Language Toggle Button */
+.language-dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.language-toggle {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #1e90ff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.language-toggle:hover {
+  background: #1e90ff;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(30, 144, 255, 0.3);
+}
+
+.language-toggle:active {
+  transform: translateY(0);
+}
+
+.dropdown-arrow {
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+}
+
+.language-toggle.active .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  min-width: 120px;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.dropdown-item:hover {
+  background: #1e90ff;
+  color: #fff;
+}
+
+.dropdown-item:first-child {
+  border-radius: 8px 8px 0 0;
+}
+
+.dropdown-item:last-child {
+  border-radius: 0 0 8px 8px;
+}
+
+.dropdown-item:only-child {
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .language-dropdown {
+    margin-left: 0.5rem;
+  }
+  
+  .language-toggle {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  .dropdown-menu {
+    min-width: 100px;
+  }
+  
+  .dropdown-item {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .language-dropdown {
+    margin-left: 0.3rem;
+  }
+  
+  .language-toggle {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.7rem;
+  }
+  
+  .dropdown-menu {
+    min-width: 90px;
+  }
+  
+  .dropdown-item {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.7rem;
+  }
+}
+

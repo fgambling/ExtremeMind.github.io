@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ExtremeMind</title>
+  <title data-en="ExtremeMind" data-zh="极智方工作室">ExtremeMind</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,48 +11,58 @@
   <header>
     <div class="logo">
       <img src="static/logo_revert.png" alt="ExtremeMind Logo">
-      <span>ExtremeMind</span>
+      <span data-en="ExtremeMind" data-zh="极智方工作室">ExtremeMind</span>
     </div>
     <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <a href="#about" data-en="About" data-zh="关于">About</a>
+      <a href="#projects" data-en="Projects" data-zh="项目">Projects</a>
+      <a href="#contact" data-en="Contact" data-zh="联系">Contact</a>
+      <div class="language-dropdown">
+        <button id="languageToggle" class="language-toggle">
+          <span id="currentLanguage">EN</span>
+          <span class="dropdown-arrow">▼</span>
+        </button>
+        <div class="dropdown-menu" id="languageDropdown">
+          <div class="dropdown-item" data-lang="en">English</div>
+          <div class="dropdown-item" data-lang="zh">中文</div>
+        </div>
+      </div>
     </nav>
   </header>
 
   <!-- Hero -->
   <section class="hero">
-    <h1>ExtremeMind Studio</h1>
-    <h2>Empowering innovation by merging traditional technology with AI</h2>
+    <h1 data-en="ExtremeMind Studio" data-zh="极智方工作室">ExtremeMind Studio</h1>
+    <h2 data-en="Empowering innovation by merging traditional technology with AI" data-zh="融合传统技术与人工智能，推动创新">Empowering innovation by merging traditional technology with AI</h2>
   </section>
 
   <!-- About -->
   <section id="about">
-    <h2>1.  About</h2>
-    <p>
+    <h2 data-en="1. About" data-zh="1. 关于我们">1. About</h2>
+    <p data-en="Founded in 2023, ExtremeMind is a forward‑thinking studio committed to merging traditional software development with cutting‑edge artificial intelligence." data-zh="成立于2023年，极智工作室是一个前瞻性的工作室，致力于将传统软件开发与前沿人工智能技术相结合。">
         Founded in 2023, <strong>ExtremeMind</strong> is a forward‑thinking studio committed to merging traditional software development with cutting‑edge artificial intelligence.
     </p>
-    <p>
+    <p data-en="We specialize in building AI agents seamlessly integrated into full‑stack applications and WeChat Mini Programs, enabling businesses to unlock new levels of efficiency and user engagement." data-zh="我们专注于构建无缝集成到全栈应用和微信小程序中的AI代理，帮助企业实现更高水平的效率和用户参与度。">
         We specialize in building <strong>AI agents</strong> seamlessly integrated into <strong>full‑stack applications</strong> and <strong>WeChat Mini Programs</strong>, enabling businesses to unlock new levels of efficiency and user engagement.
     </p>
-    <p>
+    <p data-en="Beyond product development, we also craft Python automation scripts and explore other innovative solutions to help our clients streamline workflows and stay ahead in a rapidly evolving digital landscape." data-zh="除了产品开发，我们还制作Python自动化脚本并探索其他创新解决方案，帮助客户简化工作流程，在快速发展的数字环境中保持领先地位。">
         Beyond product development, we also craft <strong>Python automation scripts</strong> and explore other innovative solutions to help our clients streamline workflows and stay ahead in a rapidly evolving digital landscape.
     </p>
   </section>
 
   <!-- Projects -->
   <section id="projects">
-    <h2>2. Projects</h2>
-    <p class="projects-note">
+    <h2 data-en="2. Projects" data-zh="2. 项目">2. Projects</h2>
+    <p class="projects-note" data-en="Note: For confidentiality reasons, only select open‑source projects are shared with GitHub links." data-zh="注意：出于保密原因，仅分享部分开源项目并提供GitHub链接。">
       <em>Note: For confidentiality reasons, only select open‑source projects are shared with GitHub links.</em>
     </p>
     
     <!-- Featured Projects -->
     <div class="featured-projects">
-      <h3>Featured Projects</h3>
+      <h3 data-en="Featured Projects" data-zh="精选项目">Featured Projects</h3>
               <div class="featured-project">
           <div class="project-header">
-            <h4>Automatic Scoring System</h4>
+            <h4 data-en="Automatic Scoring System" data-zh="自动评分系统">Automatic Scoring System</h4>
             <a href="https://github.com/fgambling/Scoring-system" target="_blank" class="github-link">
               <img src="static/github.png" alt="GitHub" class="github-icon">
             </a>
@@ -87,19 +97,19 @@
           
           <div class="project-details">
             <div class="project-section">
-              <h5>Overview</h5>
-              <p>A full‑stack web application that streamlines exam grading through AI‑assisted answer evaluation, configurable marking rules, and role‑based access control, featuring manual review tools, Excel data integration, and detailed reporting for admins, test developers, and markers.</p>
+              <h5 data-en="Overview" data-zh="概述">Overview</h5>
+              <p data-en="A full‑stack web application that streamlines exam grading through AI‑assisted answer evaluation, configurable marking rules, and role‑based access control, featuring manual review tools, Excel data integration, and detailed reporting for admins, test developers, and markers." data-zh="一个全栈网络应用程序，通过AI辅助答案评估、可配置的评分规则和基于角色的访问控制来简化考试评分，具有手动审查工具、Excel数据集成以及为管理员、测试开发人员和评分员提供的详细报告功能。">A full‑stack web application that streamlines exam grading through AI‑assisted answer evaluation, configurable marking rules, and role‑based access control, featuring manual review tools, Excel data integration, and detailed reporting for admins, test developers, and markers.</p>
             </div>
             
             <div class="project-section">
-              <h5>Core Features</h5>
+              <h5 data-en="Core Features" data-zh="核心功能">Core Features</h5>
               <ul class="feature-list">
-                <li><strong>Automated Scoring</strong> – Intelligent evaluation with flexible marking rules (case, punctuation, spelling, grammar)</li>
-                <li><strong>Role‑Based Access</strong> – Dedicated dashboards for Admins, Test Developers, and Markers</li>
-                <li><strong>Manual Review</strong> – Flagged answers for human validation and scoring</li>
-                <li><strong>Excel Integration</strong> – Import student responses and export scored results</li>
-                <li><strong>Real‑Time Reporting</strong> – Live progress tracking and performance analytics</li>
-                <li><strong>Advanced Linguistic Checks</strong> – Spelling & grammar analysis for accurate scoring</li>
+                <li><strong data-en="Automated Scoring" data-zh="自动评分">Automated Scoring</strong> <span data-en="– Intelligent evaluation with flexible marking rules (case, punctuation, spelling, grammar)" data-zh="– 具有灵活评分规则的智能评估（大小写、标点符号、拼写、语法）">– Intelligent evaluation with flexible marking rules (case, punctuation, spelling, grammar)</span></li>
+                <li><strong data-en="Role‑Based Access" data-zh="基于角色的访问">Role‑Based Access</strong> <span data-en="– Dedicated dashboards for Admins, Test Developers, and Markers" data-zh="– 为管理员、测试开发人员和评分员提供专用仪表板">– Dedicated dashboards for Admins, Test Developers, and Markers</span></li>
+                <li><strong data-en="Manual Review" data-zh="手动审查">Manual Review</strong> <span data-en="– Flagged answers for human validation and scoring" data-zh="– 标记答案供人工验证和评分">– Flagged answers for human validation and scoring</span></li>
+                <li><strong data-en="Excel Integration" data-zh="Excel集成">Excel Integration</strong> <span data-en="– Import student responses and export scored results" data-zh="– 导入学生回答并导出评分结果">– Import student responses and export scored results</span></li>
+                <li><strong data-en="Real‑Time Reporting" data-zh="实时报告">Real‑Time Reporting</strong> <span data-en="– Live progress tracking and performance analytics" data-zh="– 实时进度跟踪和性能分析">– Live progress tracking and performance analytics</span></li>
+                <li><strong data-en="Advanced Linguistic Checks" data-zh="高级语言检查">Advanced Linguistic Checks</strong> <span data-en="– Spelling & grammar analysis for accurate scoring" data-zh="– 拼写和语法分析以确保准确评分">– Spelling & grammar analysis for accurate scoring</span></li>
               </ul>
             </div>
           </div>
@@ -116,7 +126,7 @@
           </div>
         </div>
       <div class="featured-project">
-        <h4>Relationship AI Agent Management Platform</h4>
+        <h4 data-en="Relationship AI Agent Management Platform" data-zh="智能体人脉关系管理平台">Relationship AI Agent Management Platform</h4>
         
                   <div class="image-carousel" id="relationshipCarousel">
             <div class="carousel-container">
@@ -145,18 +155,18 @@
 
         <div class="project-details">
             <div class="project-section">
-              <h5>Overview</h5>
-              <p>A comprehensive WeChat Mini Program platform designed for intelligent relationship management and networking. The system integrates AI-powered evaluation, connection matching, idea marketplace, and conversation management to help users build and maintain valuable professional relationships.</p>
+              <h5 data-en="Overview" data-zh="概述">Overview</h5>
+              <p data-en="A comprehensive WeChat Mini Program platform designed for intelligent relationship management and networking. The system integrates AI-powered evaluation, connection matching, idea marketplace, and conversation management to help users build and maintain valuable professional relationships." data-zh="一个专为智能体人脉关系管理和匹配而设计的综合微信小程序平台。该系统集成了AI驱动的评估、连接匹配、创意市场和对话管理，帮助用户建立和维护有价值的专业关系。">A comprehensive WeChat Mini Program platform designed for intelligent relationship management and networking. The system integrates AI-powered evaluation, connection matching, idea marketplace, and conversation management to help users build and maintain valuable professional relationships.</p>
             </div>
             
             <div class="project-section">
-              <h5>Core Features</h5>
+              <h5 data-en="Core Features" data-zh="核心功能">Core Features</h5>
               <ul class="feature-list">
-                <li><strong>AI‑Powered Relationship Evaluation</strong> – Intelligent assessment of relationship value and potential with personalized scoring and historical tracking</li>
-                <li><strong>Connection Square</strong> – Publish and discover opportunities with smart matching, contact management, and business card integration</li>
-                <li><strong>Idea Marketplace</strong> – Share and purchase innovative ideas with point‑based transactions, history tracking, and IP protection</li>
-                <li><strong>AI Conversation Assistant</strong> – Coze AI‑powered, context‑aware conversations with multi‑turn dialogue management and relationship guidance</li>
-                <li><strong>User Management</strong> – Multiple login options (WeChat, phone, password), customizable profiles, point system, and secure JWT‑based authentication</li>                
+                <li><strong data-en="AI‑Powered Relationship Evaluation" data-zh="AI驱动的关系评估">AI‑Powered Relationship Evaluation</strong> <span data-en="– Intelligent assessment of relationship value and potential with personalized scoring and historical tracking" data-zh="– 对关系价值和潜力进行智能评估，具有个性化评分和历史跟踪">– Intelligent assessment of relationship value and potential with personalized scoring and historical tracking</span></li>
+                <li><strong data-en="Connection Square" data-zh="连接广场">Connection Square</strong> <span data-en="– Publish and discover opportunities with smart matching, contact management, and business card integration" data-zh="– 通过智能匹配、联系人管理和名片集成发布和发现机会">– Publish and discover opportunities with smart matching, contact management, and business card integration</span></li>
+                <li><strong data-en="Idea Marketplace" data-zh="创意市场">Idea Marketplace</strong> <span data-en="– Share and purchase innovative ideas with point‑based transactions, history tracking, and IP protection" data-zh="– 通过基于积分的交易、历史跟踪和知识产权保护分享和购买创新想法">– Share and purchase innovative ideas with point‑based transactions, history tracking, and IP protection</span></li>
+                <li><strong data-en="AI Conversation Assistant" data-zh="AI对话助手">AI Conversation Assistant</strong> <span data-en="– Coze AI‑powered, context‑aware conversations with multi‑turn dialogue management and relationship guidance" data-zh="– 由Coze AI驱动的上下文感知对话，具有多轮对话管理和关系指导">– Coze AI‑powered, context‑aware conversations with multi‑turn dialogue management and relationship guidance</span></li>
+                <li><strong data-en="User Management" data-zh="用户管理">User Management</strong> <span data-en="– Multiple login options (WeChat, phone, password), customizable profiles, point system, and secure JWT‑based authentication" data-zh="– 多种登录选项（微信、手机、密码）、可自定义配置文件、积分系统和基于JWT的安全认证">– Multiple login options (WeChat, phone, password), customizable profiles, point system, and secure JWT‑based authentication</span></li>                
               </ul>
             </div>
           </div>
@@ -176,21 +186,21 @@
           </div>
       </div>
       <div class="featured-project">
-        <h4>Python automation scripts</h4>
+        <h4 data-en="Python automation scripts" data-zh="Python自动化脚本">Python automation scripts</h4>
         <video src="static/Python automation.mp4" controls class="project-video" poster="static/logo_revert.png">
-          Your browser does not support the video tag.
+          <span data-en="Your browser does not support the video tag." data-zh="您的浏览器不支持视频标签。">Your browser does not support the video tag.</span>
         </video>
-        <p>
+        <p data-en="An intelligent automation solution that combines Android Studio's mobile emulator with custom Python scripts to streamline high‑frequency purchasing tasks." data-zh="一个智能自动化解决方案，结合Android Studio的移动模拟器和自定义Python脚本来简化高频购买任务。">
             An intelligent automation solution that combines 
-            <strong>Android Studio’s mobile emulator</strong> with 
-            <strong>custom Python scripts</strong> to streamline high‑frequency purchasing tasks.
+            <strong data-en="Android Studio's mobile emulator" data-zh="Android Studio的移动模拟器">Android Studio's mobile emulator</strong> with 
+            <strong data-en="custom Python scripts" data-zh="自定义Python脚本">custom Python scripts</strong> to streamline high‑frequency purchasing tasks.
           </p>
-          <p>
-            The bot <strong>monitors product availability in real time</strong> within a mobile shopping app 
-            and <strong>automatically completes the checkout process</strong> based on predefined conditions.
+          <p data-en="The bot monitors product availability in real time within a mobile shopping app and automatically completes the checkout process based on predefined conditions." data-zh="机器人实时监控移动端购物应用中的产品，并根据预定义条件自动完成结账流程。">
+            The bot <strong data-en="monitors product availability in real time" data-zh="实时监控产品可用性">monitors product availability in real time</strong> within a mobile shopping app 
+            and <strong data-en="automatically completes the checkout process" data-zh="自动完成结账流程">automatically completes the checkout process</strong> based on predefined conditions.
           </p>
-          <p>
-            This project helps businesses and individuals <strong>save time, reduce manual effort, 
+          <p data-en="This project helps businesses and individuals save time, reduce manual effort, and improve efficiency in competitive purchasing scenarios." data-zh="该项目帮助企业和个人在竞争性购买场景中节省时间、减少人工努力并提高效率。">
+            This project helps businesses and individuals <strong data-en="save time, reduce manual effort, and improve efficiency" data-zh="节省时间、减少人工努力并提高效率">save time, reduce manual effort, 
             and improve efficiency</strong> in competitive purchasing scenarios.
           </p>
         <div class="tech-stack">
@@ -203,16 +213,16 @@
     
     <!-- Other Projects -->
     <div class="other-projects">
-      <h3>Other Projects</h3>
+      <h3 data-en="Other Projects" data-zh="其他项目">Other Projects</h3>
     <div class="project-list">
       <div class="project">
           <div class="project-header">
-            <h4>Lifestyle and Mood Management App Based on Android Studio</h4>
+            <h4 data-en="Lifestyle and Mood Management App Based on Android Studio" data-zh="基于Android Studio的生活方式与情绪管理应用">Lifestyle and Mood Management App Based on Android Studio</h4>
             <a href="https://github.com/fgambling/Lifestyle-Habit-Management-App" target="_blank" class="github-link">
               <img src="static/github.png" alt="GitHub" class="github-icon">
             </a>
           </div>
-          <p>A comprehensive Android application built with Java and Android Studio for tracking daily habits, mood patterns, and personal diary entries. The app provides users with tools to monitor their lifestyle habits, record their emotional states, and maintain a personal diary with location tracking and media attachments.</p>
+          <p data-en="A comprehensive Android application built with Java and Android Studio for tracking daily habits, mood patterns, and personal diary entries. The app provides users with tools to monitor their lifestyle habits, record their emotional states, and maintain a personal diary with location tracking and media attachments." data-zh="一个使用Java和Android Studio构建的综合Android应用程序，用于跟踪日常习惯、情绪模式和个人日记条目。该应用程序为用户提供工具来监控他们的生活方式习惯、记录他们的情绪状态，并维护具有位置跟踪和媒体附件的个人日记。">A comprehensive Android application built with Java and Android Studio for tracking daily habits, mood patterns, and personal diary entries. The app provides users with tools to monitor their lifestyle habits, record their emotional states, and maintain a personal diary with location tracking and media attachments.</p>
           <div class="tech-stack">
             <span class="tech-tag">Java</span>
             <span class="tech-tag">Android Studio</span>
@@ -223,12 +233,43 @@
         </div>
         <div class="project">
           <div class="project-header">
-            <h4>Lightweight Linux Web Server</h4>
+            <h4 data-en="Office Automation (OA) System" data-zh="办公自动化(OA)系统">Office Automation (OA) System</h4>
+            <a href="https://github.com/fgambling/Office-Automation-System" target="_blank" class="github-link">
+              <img src="static/github.png" alt="GitHub" class="github-icon">
+            </a>
+          </div>
+          <p data-en="A modern, feature-rich Office Automation (OA) system built with Vue 3, TypeScript, and Element Plus. This system provides comprehensive workflow management, approval processes, and administrative tools for enterprise collaboration." data-zh="一个使用Vue 3、TypeScript和Element Plus构建的现代化、功能丰富的办公自动化(OA)系统。该系统提供全面的工作流管理、审批流程和企业协作管理工具。">A modern, feature-rich Office Automation (OA) system built with Vue 3, TypeScript, and Element Plus. This system provides comprehensive workflow management, approval processes, and administrative tools for enterprise collaboration.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">JSON</span>
+            <span class="tech-tag">RESTful API</span>
+            <span class="tech-tag">Vue.js</span>
+          </div>
+        </div>
+        <div class="project">
+          <div class="project-header">
+            <h4 data-en="Student Management System Based on .NET" data-zh="基于.NET的学生管理系统">Student Management System Based on .NET</h4>
+            <a href="https://github.com/fgambling/Student_Management_System" target="_blank" class="github-link">
+              <img src="static/github.png" alt="GitHub" class="github-icon">
+            </a>
+          </div>
+          <p data-en="A comprehensive student information management system developed using C# and .NET Framework. This system streamlines data processing and management in educational institutions, ensuring efficient handling of student records, course management, and academic performance tracking." data-zh="一个使用C#和.NET Framework开发的综合学生信息管理系统。该系统简化了教育机构的数据处理和管理，确保高效处理学生记录、课程管理和学术表现跟踪。">A comprehensive student information management system developed using C# and .NET Framework. This system streamlines data processing and management in educational institutions, ensuring efficient handling of student records, course management, and academic performance tracking.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">C#</span>
+            <span class="tech-tag">ASP.NET</span>
+            <span class="tech-tag">SQL Server</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+        </div>
+        <div class="project">
+          <div class="project-header">
+            <h4 data-en="Lightweight Linux Web Server" data-zh="轻量级Linux网络服务器">Lightweight Linux Web Server</h4>
             <a href="https://github.com/fgambling/WebServer" target="_blank" class="github-link">
               <img src="static/github.png" alt="GitHub" class="github-icon">
             </a>
           </div>
-          <p>A high-performance, event-driven web server implemented in C++ for Linux systems. This server uses the Proactor concurrency model to handle thousands of concurrent connections efficiently.</p>
+          <p data-en="A high-performance, event-driven web server implemented in C++ for Linux systems. This server uses the Proactor concurrency model to handle thousands of concurrent connections efficiently." data-zh="一个用C++为Linux系统实现的高性能、事件驱动的网络服务器。该服务器使用Proactor并发模型来高效处理数千个并发连接。">A high-performance, event-driven web server implemented in C++ for Linux systems. This server uses the Proactor concurrency model to handle thousands of concurrent connections efficiently.</p>
           <div class="tech-stack">
             <span class="tech-tag">C++</span>
             <span class="tech-tag">Linux</span>
@@ -236,14 +277,14 @@
             <span class="tech-tag">TCP/IP</span>
           </div>
         </div>
-        <div class="project">
+        <div class="project project-hidden">
           <div class="project-header">
-            <h4>Melbourne Journey - Interactive Map Application</h4>
+            <h4 data-en="Melbourne Journey - Interactive Map Application" data-zh="墨尔本之旅 - 交互式地图应用">Melbourne Journey - Interactive Map Application</h4>
             <a href="https://github.com/fgambling/Melbourne-Journey---Interactive-Map-Application" target="_blank" class="github-link">
               <img src="static/github.png" alt="GitHub" class="github-icon">
             </a>
           </div>
-          <p>Melbourne Journey is an interactive web-based mapping application that provides users with a comprehensive guide to explore Melbourne, Australia. The application features an interactive map with various points of interest categorized into entertainment, accommodation, dining, and transportation options.</p>
+          <p data-en="Melbourne Journey is an interactive web-based mapping application that provides users with a comprehensive guide to explore Melbourne, Australia. The application features an interactive map with various points of interest categorized into entertainment, accommodation, dining, and transportation options." data-zh="墨尔本之旅是一个交互式基于网络的地图应用程序，为用户提供探索澳大利亚墨尔本的综合指南。该应用程序具有交互式地图，包含各种兴趣点，分为娱乐、住宿、餐饮和交通选项。">Melbourne Journey is an interactive web-based mapping application that provides users with a comprehensive guide to explore Melbourne, Australia. The application features an interactive map with various points of interest categorized into entertainment, accommodation, dining, and transportation options.</p>
           <div class="tech-stack">
             <span class="tech-tag">HTML5</span>
             <span class="tech-tag">CSS3</span>
@@ -253,29 +294,14 @@
             <span class="tech-tag">IntelliJ IDEA</span>
           </div>
         </div>
-        <div class="project">
-          <div class="project-header">
-            <h4>Student Management System Based on .NET</h4>
-            <a href="https://github.com/fgambling/Student_Management_System" target="_blank" class="github-link">
-              <img src="static/github.png" alt="GitHub" class="github-icon">
-            </a>
-          </div>
-          <p>A comprehensive student information management system developed using C# and .NET Framework. This system streamlines data processing and management in educational institutions, ensuring efficient handling of student records, course management, and academic performance tracking.</p>
-          <div class="tech-stack">
-            <span class="tech-tag">C#</span>
-            <span class="tech-tag">ASP.NET</span>
-            <span class="tech-tag">SQL Server</span>
-            <span class="tech-tag">JavaScript</span>
-          </div>
-        </div>
         <div class="project project-hidden">
           <div class="project-header">
-            <h4>2048 Game Based on Qt</h4>
+            <h4 data-en="2048 Game Based on Qt" data-zh="基于Qt的2048游戏">2048 Game Based on Qt</h4>
             <a href="https://github.com/fgambling/2048-gt" target="_blank" class="github-link">
               <img src="static/github.png" alt="GitHub" class="github-icon">
             </a>
           </div>
-          <p>A Qt/C++ implementation of the popular 2048 puzzle game. This project provides a complete desktop application with a graphical user interface built using Qt framework.</p>
+          <p data-en="A Qt/C++ implementation of the popular 2048 puzzle game. This project provides a complete desktop application with a graphical user interface built using Qt framework." data-zh="流行的2048益智游戏的Qt/C++实现。该项目提供了一个使用Qt框架构建的具有图形用户界面的完整桌面应用程序。">A Qt/C++ implementation of the popular 2048 puzzle game. This project provides a complete desktop application with a graphical user interface built using Qt framework.</p>
           <div class="tech-stack">
             <span class="tech-tag">C++</span>
             <span class="tech-tag">Qt</span>
@@ -285,21 +311,20 @@
       </div>
       
       <div class="show-more-container">
-        <button id="showMoreBtn" class="show-more-btn">Show More</button>
-        <button id="showLessBtn" class="show-less-btn" style="display: none;">Show Less</button>
+        <button id="showMoreBtn" class="show-more-btn" data-en="Show More" data-zh="显示更多">Show More</button>
+        <button id="showLessBtn" class="show-less-btn" style="display: none;" data-en="Show Less" data-zh="显示更少">Show Less</button>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
   <section id="contact">
-    <h2>3. Contact us</h2>
+    <h2 data-en="3. Contact us" data-zh="3. 联系我们">3. Contact us</h2>
     <p>Email: fengyu823@gmail.com</p>
-    <p>LinkedIn: <a href="#">linkedin.com/extrememind</a></p>
   </section>
 
   <footer>
-    <p>© 2025 ExtremeMind. All rights reserved.</p>
+    <p data-en="© 2025 ExtremeMind. All rights reserved." data-zh="© 2025 极智工作室. 保留所有权利。">© 2025 ExtremeMind. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>

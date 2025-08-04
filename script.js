@@ -1,4 +1,83 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Language Toggle functionality
+  const languageToggle = document.getElementById("languageToggle");
+  const languageDropdown = document.getElementById("languageDropdown");
+  const currentLanguageSpan = document.getElementById("currentLanguage");
+  let currentLanguage = "en"; // Default language is English
+
+  function updateLanguage(lang) {
+    const elements = document.querySelectorAll("[data-en][data-zh]");
+    elements.forEach((element) => {
+      if (lang === "zh") {
+        element.textContent = element.getAttribute("data-zh");
+      } else {
+        element.textContent = element.getAttribute("data-en");
+      }
+    });
+
+    // Update current language display
+    if (lang === "zh") {
+      currentLanguageSpan.textContent = "中文";
+    } else {
+      currentLanguageSpan.textContent = "EN";
+    }
+
+    // Update document language attribute
+    document.documentElement.lang = lang;
+
+    // Update page title
+    const titleElement = document.querySelector("title");
+    if (titleElement) {
+      if (lang === "zh") {
+        titleElement.textContent = titleElement.getAttribute("data-zh");
+      } else {
+        titleElement.textContent = titleElement.getAttribute("data-en");
+      }
+    }
+  }
+
+  // Toggle dropdown menu
+  function toggleDropdown() {
+    const isOpen = languageDropdown.classList.contains("show");
+    if (isOpen) {
+      languageDropdown.classList.remove("show");
+      languageToggle.classList.remove("active");
+    } else {
+      languageDropdown.classList.add("show");
+      languageToggle.classList.add("active");
+    }
+  }
+
+  // Language toggle button click event
+  languageToggle.addEventListener("click", function (e) {
+    e.stopPropagation();
+    toggleDropdown();
+  });
+
+  // Dropdown item click events
+  const dropdownItems = document.querySelectorAll(".dropdown-item");
+  dropdownItems.forEach((item) => {
+    item.addEventListener("click", function () {
+      const selectedLang = this.getAttribute("data-lang");
+      if (selectedLang !== currentLanguage) {
+        currentLanguage = selectedLang;
+        updateLanguage(currentLanguage);
+      }
+      toggleDropdown();
+    });
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener("click", function (e) {
+    if (
+      !languageToggle.contains(e.target) &&
+      !languageDropdown.contains(e.target)
+    ) {
+      languageDropdown.classList.remove("show");
+      languageToggle.classList.remove("active");
+    }
+  });
+
   // Show More/Less functionality
   const showMoreBtn = document.getElementById("showMoreBtn");
   const showLessBtn = document.getElementById("showLessBtn");
