@@ -6,7 +6,13 @@
   <title data-en="ExtremeMind" data-zh="极智方工作室">ExtremeMind</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+  <body class="loading">
+    <!-- Preloader -->
+    <div id="preloader" aria-hidden="true">
+      <div class="preloader-inner">
+        <img src="static/logo_revert.png" alt="ExtremeMind Logo" class="preloader-logo" />
+      </div>
+    </div>
   <!-- Navigation -->
   <header>
     <div class="logo">
@@ -32,26 +38,26 @@
 
   <!-- Hero -->
   <section class="hero">
-    <h1 data-en="ExtremeMind Studio" data-zh="极智方工作室">ExtremeMind Studio</h1>
-    <h2 data-en="Empowering innovation by merging traditional technology with AI" data-zh="融合传统技术与人工智能，推动创新">Empowering innovation by merging traditional technology with AI</h2>
+    <h1 class="reveal-vertical" data-en="ExtremeMind Studio" data-zh="极智方工作室">ExtremeMind Studio</h1>
+    <h2 class="reveal-vertical" data-en="Empowering innovation by merging traditional technology with AI" data-zh="融合传统技术与人工智能，推动创新">Empowering innovation by merging traditional technology with AI</h2>
   </section>
 
   <!-- About -->
   <section id="about">
-    <h2 data-en="1. About" data-zh="1. 关于我们">1. About</h2>
-    <p data-en="Founded in 2023, ExtremeMind is a forward‑thinking studio committed to merging traditional software development with cutting‑edge artificial intelligence." data-zh="成立于2023年，极智工作室是一个前瞻性的工作室，致力于将传统软件开发与前沿人工智能技术相结合。">
+    <h2 class="reveal-vertical rv-1" data-en="1. About" data-zh="1. 关于我们">1. About</h2>
+    <p class="reveal-vertical rv-2" data-en="Founded in 2023, ExtremeMind is a forward‑thinking studio committed to merging traditional software development with cutting‑edge artificial intelligence." data-zh="成立于2023年，极智工作室是一个前瞻性的工作室，致力于将传统软件开发与前沿人工智能技术相结合。">
         Founded in 2023, <strong>ExtremeMind</strong> is a forward‑thinking studio committed to merging traditional software development with cutting‑edge artificial intelligence.
     </p>
-    <p data-en="We specialize in building AI agents seamlessly integrated into full‑stack applications and WeChat Mini Programs, enabling businesses to unlock new levels of efficiency and user engagement." data-zh="我们专注于构建无缝集成到全栈应用和微信小程序中的AI代理，帮助企业实现更高水平的效率和用户参与度。">
+    <p class="reveal-vertical rv-3" data-en="We specialize in building AI agents seamlessly integrated into full‑stack applications and WeChat Mini Programs, enabling businesses to unlock new levels of efficiency and user engagement." data-zh="我们专注于构建无缝集成到全栈应用和微信小程序中的AI代理，帮助企业实现更高水平的效率和用户参与度。">
         We specialize in building <strong>AI agents</strong> seamlessly integrated into <strong>full‑stack applications</strong> and <strong>WeChat Mini Programs</strong>, enabling businesses to unlock new levels of efficiency and user engagement.
     </p>
-    <p data-en="Beyond product development, we also craft Python automation scripts and explore other innovative solutions to help our clients streamline workflows and stay ahead in a rapidly evolving digital landscape." data-zh="除了产品开发，我们还制作Python自动化脚本并探索其他创新解决方案，帮助客户简化工作流程，在快速发展的数字环境中保持领先地位。">
+    <p class="reveal-vertical rv-4" data-en="Beyond product development, we also craft Python automation scripts and explore other innovative solutions to help our clients streamline workflows and stay ahead in a rapidly evolving digital landscape." data-zh="除了产品开发，我们还制作Python自动化脚本并探索其他创新解决方案，帮助客户简化工作流程，在快速发展的数字环境中保持领先地位。">
         Beyond product development, we also craft <strong>Python automation scripts</strong> and explore other innovative solutions to help our clients streamline workflows and stay ahead in a rapidly evolving digital landscape.
     </p>
   </section>
 
   <!-- Projects -->
-  <section id="projects">
+  <section id="projects" data-reveal>
     <h2 data-en="2. Projects" data-zh="2. 项目">2. Projects</h2>
     <p class="projects-note" data-en="Note: For confidentiality reasons, only select open‑source projects are shared with GitHub links." data-zh="注意：出于保密原因，仅分享部分开源项目并提供GitHub链接。">
       <em>Note: For confidentiality reasons, only select open‑source projects are shared with GitHub links.</em>
@@ -60,7 +66,7 @@
     <!-- Featured Projects -->
     <div class="featured-projects">
       <h3 data-en="Featured Projects" data-zh="精选项目">Featured Projects</h3>
-              <div class="featured-project">
+              <div class="featured-project reveal-card">
           <div class="project-header">
             <h4 data-en="Automatic Scoring System" data-zh="自动评分系统">Automatic Scoring System</h4>
             <a href="https://github.com/fgambling/Scoring-system" target="_blank" class="github-link">
@@ -98,7 +104,7 @@
           <div class="project-details">
             <div class="project-section">
               <h5 data-en="Overview" data-zh="概述">Overview</h5>
-              <p data-en="A full‑stack web application that streamlines exam grading through AI‑assisted answer evaluation, configurable marking rules, and role‑based access control, featuring manual review tools, Excel data integration, and detailed reporting for admins, test developers, and markers." data-zh="一个全栈网络应用程序，通过AI辅助答案评估、可配置的评分规则和基于角色的访问控制来简化考试评分，具有手动审查工具、Excel数据集成以及为管理员、测试开发人员和评分员提供的详细报告功能。">A full‑stack web application that streamlines exam grading through AI‑assisted answer evaluation, configurable marking rules, and role‑based access control, featuring manual review tools, Excel data integration, and detailed reporting for admins, test developers, and markers.</p>
+              <p data-en="A full‑stack web application that streamlines exam grading through AI‑assisted answer evaluation, configurable marking rules, and role‑based access control, featuring manual review tools, Excel data integration, and detailed reporting for admins, test developers, and markers. The system is built with modern cloud-native architecture and deployed on AWS for high availability and scalability." data-zh="一个全栈网络应用程序，通过AI辅助答案评估、可配置的评分规则和基于角色的访问控制来简化考试评分，具有手动审查工具、Excel数据集成以及为管理员、测试开发人员和评分员提供的详细报告功能。该系统采用现代云原生架构构建，部署在AWS上以确保高可用性和可扩展性。">A full‑stack web application that streamlines exam grading through AI‑assisted answer evaluation, configurable marking rules, and role‑based access control, featuring manual review tools, Excel data integration, and detailed reporting for admins, test developers, and markers. The system is built with modern cloud-native architecture and deployed on AWS for high availability and scalability.</p>
             </div>
             
             <div class="project-section">
@@ -110,6 +116,7 @@
                 <li><strong data-en="Excel Integration" data-zh="Excel集成">Excel Integration</strong> <span data-en="– Import student responses and export scored results" data-zh="– 导入学生回答并导出评分结果">– Import student responses and export scored results</span></li>
                 <li><strong data-en="Real‑Time Reporting" data-zh="实时报告">Real‑Time Reporting</strong> <span data-en="– Live progress tracking and performance analytics" data-zh="– 实时进度跟踪和性能分析">– Live progress tracking and performance analytics</span></li>
                 <li><strong data-en="Advanced Linguistic Checks" data-zh="高级语言检查">Advanced Linguistic Checks</strong> <span data-en="– Spelling & grammar analysis for accurate scoring" data-zh="– 拼写和语法分析以确保准确评分">– Spelling & grammar analysis for accurate scoring</span></li>
+                <li><strong data-en="Cloud‑Native Architecture" data-zh="云原生架构">Cloud‑Native Architecture</strong> <span data-en="– Built for AWS deployment with auto-scaling capabilities" data-zh="– 专为AWS部署构建，具有自动扩展功能">– Built for AWS deployment with auto-scaling capabilities</span></li>
               </ul>
             </div>
           </div>
@@ -123,9 +130,13 @@
             <span class="tech-tag">Tailwind CSS</span>
             <span class="tech-tag">Express.js</span>
             <span class="tech-tag">JWT</span>
+            <span class="tech-tag">AWS</span>
+            <span class="tech-tag">EC2</span>
+            <span class="tech-tag">RDS</span>
+            <span class="tech-tag">S3</span>
           </div>
         </div>
-      <div class="featured-project">
+      <div class="featured-project reveal-card">
         <h4 data-en="Relationship AI Agent Management Platform" data-zh="智能体人脉关系管理平台">Relationship AI Agent Management Platform</h4>
         
                   <div class="image-carousel" id="relationshipCarousel">
@@ -185,7 +196,7 @@
             <span class="tech-tag">MySQL</span>
           </div>
       </div>
-      <div class="featured-project">
+      <div class="featured-project reveal-card">
         <h4 data-en="Python automation scripts" data-zh="Python自动化脚本">Python automation scripts</h4>
         <video src="static/Python automation.mp4" controls class="project-video" poster="static/logo_revert.png">
           <span data-en="Your browser does not support the video tag." data-zh="您的浏览器不支持视频标签。">Your browser does not support the video tag.</span>
@@ -215,23 +226,25 @@
     <div class="other-projects">
       <h3 data-en="Other Projects" data-zh="其他项目">Other Projects</h3>
     <div class="project-list">
-      <div class="project">
+
+        <div class="project reveal-card">
           <div class="project-header">
-            <h4 data-en="Lifestyle and Mood Management App Based on Android Studio" data-zh="基于Android Studio的生活方式与情绪管理应用">Lifestyle and Mood Management App Based on Android Studio</h4>
-            <a href="https://github.com/fgambling/Lifestyle-Habit-Management-App" target="_blank" class="github-link">
-              <img src="static/github.png" alt="GitHub" class="github-icon">
-            </a>
+            <h4 data-en="Golf Sport Shop" data-zh="高尔夫运动商店">Golf Sport Shop</h4>
           </div>
-          <p data-en="A comprehensive Android application built with Java and Android Studio for tracking daily habits, mood patterns, and personal diary entries. The app provides users with tools to monitor their lifestyle habits, record their emotional states, and maintain a personal diary with location tracking and media attachments." data-zh="一个使用Java和Android Studio构建的综合Android应用程序，用于跟踪日常习惯、情绪模式和个人日记条目。该应用程序为用户提供工具来监控他们的生活方式习惯、记录他们的情绪状态，并维护具有位置跟踪和媒体附件的个人日记。">A comprehensive Android application built with Java and Android Studio for tracking daily habits, mood patterns, and personal diary entries. The app provides users with tools to monitor their lifestyle habits, record their emotional states, and maintain a personal diary with location tracking and media attachments.</p>
+          <p data-en="Golf Sport Shop is a comprehensive e-commerce platform designed specifically for golf enthusiasts. The application provides a seamless shopping experience for golf equipment, accessories, and related products through an intuitive mobile interface. The backend is powered by AWS cloud services, ensuring high availability, scalability, and reliable data management for the e-commerce operations." data-zh="高尔夫运动商店是一个专为高尔夫爱好者设计的综合电子商务平台。该应用程序通过直观的移动界面为高尔夫设备、配件和相关产品提供无缝的购物体验。后端由AWS云服务提供支持，确保电子商务运营的高可用性、可扩展性和可靠的数据管理。">Golf Sport Shop is a comprehensive e-commerce platform designed specifically for golf enthusiasts. The application provides a seamless shopping experience for golf equipment, accessories, and related products through an intuitive mobile interface. The backend is powered by AWS cloud services, ensuring high availability, scalability, and reliable data management for the e-commerce operations.</p>
           <div class="tech-stack">
-            <span class="tech-tag">Java</span>
-            <span class="tech-tag">Android Studio</span>
-            <span class="tech-tag">Firebase</span>
-            <span class="tech-tag">Google Maps API</span>
-            <span class="tech-tag">JUnit</span>
+            <span class="tech-tag">Vue.js</span>
+            <span class="tech-tag">CSS3</span>
+            <span class="tech-tag">Spring Boot</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">JWT</span>
+            <span class="tech-tag">RESTful API</span>
+            <span class="tech-tag">AWS</span>
+            <span class="tech-tag">EC2</span>
+            <span class="tech-tag">RDS</span>
           </div>
         </div>
-        <div class="project">
+        <div class="project reveal-card">
           <div class="project-header">
             <h4 data-en="Office Automation (OA) System" data-zh="办公自动化(OA)系统">Office Automation (OA) System</h4>
             <a href="https://github.com/fgambling/Office-Automation-System" target="_blank" class="github-link">
@@ -247,7 +260,7 @@
             <span class="tech-tag">Vue.js</span>
           </div>
         </div>
-        <div class="project">
+        <div class="project reveal-card">
           <div class="project-header">
             <h4 data-en="Student Management System Based on .NET" data-zh="基于.NET的学生管理系统">Student Management System Based on .NET</h4>
             <a href="https://github.com/fgambling/Student_Management_System" target="_blank" class="github-link">
@@ -264,6 +277,22 @@
         </div>
         <div class="project">
           <div class="project-header">
+            <h4 data-en="Lifestyle and Mood Management App Based on Android Studio" data-zh="基于Android Studio的生活方式与情绪管理应用">Lifestyle and Mood Management App Based on Android Studio</h4>
+            <a href="https://github.com/fgambling/Lifestyle-Habit-Management-App" target="_blank" class="github-link">
+              <img src="static/github.png" alt="GitHub" class="github-icon">
+            </a>
+          </div>
+          <p data-en="A comprehensive Android application built with Java and Android Studio for tracking daily habits, mood patterns, and personal diary entries. The app provides users with tools to monitor their lifestyle habits, record their emotional states, and maintain a personal diary with location tracking and media attachments." data-zh="一个使用Java和Android Studio构建的综合Android应用程序，用于跟踪日常习惯、情绪模式和个人日记条目。该应用程序为用户提供工具来监控他们的生活方式习惯、记录他们的情绪状态，并维护具有位置跟踪和媒体附件的个人日记。">A comprehensive Android application built with Java and Android Studio for tracking daily habits, mood patterns, and personal diary entries. The app provides users with tools to monitor their lifestyle habits, record their emotional states, and maintain a personal diary with location tracking and media attachments.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">Android Studio</span>
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">Google Maps API</span>
+            <span class="tech-tag">JUnit</span>
+          </div>
+        </div>
+        <div class="project project-hidden reveal-card">
+          <div class="project-header">
             <h4 data-en="Lightweight Linux Web Server" data-zh="轻量级Linux网络服务器">Lightweight Linux Web Server</h4>
             <a href="https://github.com/fgambling/WebServer" target="_blank" class="github-link">
               <img src="static/github.png" alt="GitHub" class="github-icon">
@@ -277,7 +306,7 @@
             <span class="tech-tag">TCP/IP</span>
           </div>
         </div>
-        <div class="project project-hidden">
+        <div class="project project-hidden reveal-card">
           <div class="project-header">
             <h4 data-en="Melbourne Journey - Interactive Map Application" data-zh="墨尔本之旅 - 交互式地图应用">Melbourne Journey - Interactive Map Application</h4>
             <a href="https://github.com/fgambling/Melbourne-Journey---Interactive-Map-Application" target="_blank" class="github-link">
@@ -318,7 +347,7 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact">
+  <section id="contact" data-reveal>
     <h2 data-en="3. Contact us" data-zh="3. 联系我们">3. Contact us</h2>
     <p>Email: fengyu823@gmail.com</p>
   </section>

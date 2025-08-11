@@ -1,4 +1,22 @@
+// Force scroll to top on reload/back-forward
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+window.scrollTo(0, 0);
+window.addEventListener("pageshow", function (e) {
+  if (e.persisted) {
+    window.scrollTo(0, 0);
+  }
+});
+
+// Preloader minimal display timing
+const PRELOADER_MIN_MS = 2800; // minimum display time in ms (match reveal)
+const PRELOADER_SHRINK_MS = 200; // logo shrink duration; keep overlay until done
+const PRELOADER_START_AT = Date.now();
+
 document.addEventListener("DOMContentLoaded", function () {
+  // Ensure top on DOM ready
+  window.scrollTo(0, 0);
   // Language Toggle functionality
   const languageToggle = document.getElementById("languageToggle");
   const languageDropdown = document.getElementById("languageDropdown");
@@ -204,4 +222,67 @@ document.addEventListener("DOMContentLoaded", function () {
       showAutoSlide(autoCurrentSlide);
     });
   });
+
+  // Scroll reveal for sections
+  const revealElements = document.querySelectorAll("[data-reveal]");
+  const cardElements = document.querySelectorAll(".reveal-card");
+  const revealOnScroll = () => {
+    const viewportBottom = window.scrollY + window.innerHeight;
+    // Section-level reveals
+    revealElements.forEach((el) => {
+      if (el.classList.contains("visible")) return;
+      const rect = el.getBoundingClientRect();
+      const elTop = window.scrollY + rect.top;
+      if (viewportBottom - 80 > elTop) {
+        el.classList.add("visible");
+      }
+    });
+    // Card-by-card reveals with stronger stagger
+    let stagger = 0;
+    cardElements.forEach((card) => {
+      if (card.classList.contains("visible")) return;
+      const rect = card.getBoundingClientRect();
+      const top = window.scrollY + rect.top;
+      if (viewportBottom - 80 > top) {
+        card.style.transitionDelay = `${stagger}ms`;
+        card.classList.add("visible");
+        stagger += 200; // 200ms between cards
+      }
+    });
+  };
+  // initial check and bind
+  revealOnScroll();
+  window.addEventListener("scroll", revealOnScroll, { passive: true });
+});
+
+// Fade out preloader when page fully loaded (respect minimum display time)
+window.addEventListener("load", function () {
+  const preloader = document.getElementById("preloader");
+  const elapsed = Date.now() - PRELOADER_START_AT;
+  const remaining = Math.max(PRELOADER_MIN_MS - elapsed, 0);
+
+  const hidePreloader = () => {
+    if (!preloader) {
+      document.body.classList.remove("loading");
+      return;
+    }
+    const logo = preloader.querySelector(".preloader-logo");
+    // Keep overlay background opaque; only remove after shrink completes
+    if (logo) logo.classList.add("shrink");
+    // Ensure position at top before reveal
+    window.scrollTo(0, 0);
+    setTimeout(() => {
+      preloader.remove();
+      // Mark document ready and reveal About together with hero
+      document.body.classList.remove("loading");
+      // About section will animate like hero (no immediate visible class)
+      document.body.classList.add("ready");
+    }, PRELOADER_SHRINK_MS + 80);
+  };
+
+  if (remaining > 0) {
+    setTimeout(hidePreloader, remaining);
+  } else {
+    hidePreloader();
+  }
 });

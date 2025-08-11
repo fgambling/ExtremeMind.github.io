@@ -19,6 +19,8 @@ header {
   align-items: center;
   z-index: 100;
   box-sizing: border-box;
+  transform: translateY(0);
+  opacity: 1;
 }
 
 header .logo {
@@ -65,6 +67,50 @@ nav a:hover {
   font-weight: normal;
   color: #fff;
 }
+
+/* Hero fade-up reveal (Brittany-style) */
+.reveal-vertical {
+  opacity: 0;
+  transform: translateY(20px);
+}
+body.ready .reveal-vertical {
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 600ms cubic-bezier(0.645, 0.045, 0.355, 1),
+              opacity 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+/* Stagger: subtitle after title */
+body.ready .hero h1.reveal-vertical { transition-delay: 120ms; }
+body.ready .hero h2.reveal-vertical { transition-delay: 240ms; }
+
+/* About section stagger similar to hero */
+body.ready #about .rv-1 { transition-delay: 80ms; }
+body.ready #about .rv-2 { transition-delay: 160ms; }
+body.ready #about .rv-3 { transition-delay: 240ms; }
+body.ready #about .rv-4 { transition-delay: 320ms; }
+
+/* Scroll-based progressive reveal for sections */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 1000ms cubic-bezier(0.215, 0.61, 0.355, 1),
+              transform 1000ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  will-change: transform, opacity;
+}
+[data-reveal].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Card-by-card scroll reveal with stagger */
+.reveal-card {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 1100ms cubic-bezier(0.215, 0.61, 0.355, 1),
+              transform 1100ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  will-change: transform, opacity;
+}
+.reveal-card.visible { opacity: 1; transform: translateY(0); }
 
 /* Section */
 section {
@@ -554,5 +600,61 @@ footer {
     padding: 0.5rem 0.6rem;
     font-size: 0.7rem;
   }
+}
+
+/* Preloader */
+#preloader {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: #0a0a0a;
+  z-index: 9999;
+  opacity: 1;
+  visibility: visible;
+  transition: background-color 0.35s ease;
+}
+
+#preloader.clear { background-color: transparent; }
+
+.preloader-inner {
+  display: grid;
+  place-items: center;
+}
+
+.preloader-logo {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 20px rgba(30, 144, 255, 0.25));
+  /* Top-to-bottom reveal */
+  clip-path: inset(0 0 100% 0);
+  animation:
+    preloader-reveal 2.8s ease-out forwards;
+  will-change: clip-path, transform, opacity;
+}
+
+.preloader-logo.shrink {
+  transition: transform 0.2s ease-out;
+  transform: scale(0);
+}
+
+
+@keyframes preloader-reveal {
+  to { clip-path: inset(0 0 0 0); }
+}
+
+/* Lock scroll while loading */
+body.loading {
+  overflow: hidden;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .preloader-logo {
+    animation: none;
+    clip-path: none;
+  }
+  #preloader { transition: background-color 0.01s linear; }
 }
 
